@@ -11,6 +11,12 @@ Claude Code Router is a tool that routes Claude Code requests to different LLM p
 - **shared** (`@CCR/shared`): Shared constants, utilities, and preset management
 - **ui** (`@CCR/ui`): Web management interface (React + Vite)
 
+## Origin & Role in the AIBC Platform
+
+Upstream: `musistudio/claude-code-router` (MIT). This is an adopted third-party tool integrated into AIBC's stack at the CC-launcher layer. It is **not** a first-party AIBC component and does not participate in platform-level disciplines (papa-git trailers, FYI.md journals, CPM channels) — keep customizations focused on `~/.claude-code-router/config.json` and prefer upstream PRs for feature work.
+
+Within the platform, claude_code_router is the **multi-provider** alternative to `cc_gateway_project` (which proxies to `api.anthropic.com` with identity normalization). A given CC client uses **one** of the two — they are not chained.
+
 ## Build Commands
 
 ### Build all packages
@@ -246,3 +252,18 @@ ui (standalone frontend application)
 
 - Main configuration example: Complete example in README.md
 - Custom router example: `custom-router.example.js`
+
+## Sibling Repos in the AIBC Platform
+
+| Repo | How it relates |
+|---|---|
+| `cc_gateway_project` | Alternative path: privacy proxy that keeps CC on `api.anthropic.com` and normalizes device identity. Pick **one** per CC client — gateway = Anthropic with privacy; router = multi-provider routing. |
+| `claude-code-config` | The CC client whose traffic this router redirects. Configuration is at the CC launcher level (`ccr code`), not in `~/.claude/`. |
+| `SCRIM` | Orthogonal — secrets execution layer. Model selection (router) is independent of secret-bearing subprocess execution (Scrim's `scrim_exec` MCP, runtime unblocked 2026-05-02). |
+| `opencode_CUSTOM` | Different agent CLI (separate harness). Opencode has its own provider routing via OpenRouter; it does not consume claude_code_router. |
+| `firecracker_MicroVMs` | No relation. |
+
+## Notes for AI Assistants
+
+- This is upstream `musistudio/claude-code-router` with local config — keep edits focused on `~/.claude-code-router/config.json` and presets; prefer upstream PRs for code changes.
+- Platform conventions (papa-git trailers, FYI.md, CPM channels) do **not** apply here.
