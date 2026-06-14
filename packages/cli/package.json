@@ -25,7 +25,7 @@
     "@types/node": "^24.0.15",
     "adm-zip": "^0.5.16",
     "archiver": "^7.0.1",
-    "esbuild": "^0.25.1",
+    "esbuild": "^0.28.1",
     "find-process": "^2.0.0",
     "minimist": "^1.2.8",
     "openurl": "^1.1.1",

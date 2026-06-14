@@ -24,7 +24,7 @@
     "@types/adm-zip": "^0.5.7",
     "@types/archiver": "^7.0.0",
     "@types/node": "^24.0.15",
-    "esbuild": "^0.25.1",
+    "esbuild": "^0.28.1",
     "typescript": "^5.8.2"
   }
 }
