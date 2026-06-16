@@ -259,6 +259,7 @@ ui (standalone frontend application)
 |---|---|
 | `cc_gateway_project` | Alternative path: privacy proxy that keeps CC on `api.anthropic.com` and normalizes device identity. Pick **one** per CC client — gateway = Anthropic with privacy; router = multi-provider routing. |
 | `claude-code-config` | The CC client whose traffic this router redirects. Configuration is at the CC launcher level (`ccr code`), not in `~/.claude/`. |
+| `hermes-agent` | OpenAI-API-compatible self-improving agent. Can be pointed at a local CCR instance to gain transformer-aware multi-provider routing. See `docs/integrations/hermes-agent.md`. |
 | `SCRIM` | Orthogonal — secrets execution layer. Model selection (router) is independent of secret-bearing subprocess execution (Scrim's `scrim_exec` MCP, runtime unblocked 2026-05-02). |
 | `opencode_CUSTOM` | Different agent CLI (separate harness). Opencode has its own provider routing via OpenRouter; it does not consume claude_code_router. |
 | `firecracker_MicroVMs` | No relation. |
