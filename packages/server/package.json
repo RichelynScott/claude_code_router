@@ -18,7 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "@fastify/multipart": "^9.0.0",
-    "@fastify/static": "^8.2.0",
+    "@fastify/static": "^10.1.2",
     "@musistudio/llms": "workspace:*",
     "adm-zip": "^0.5.16",
     "dotenv": "^16.4.7",
