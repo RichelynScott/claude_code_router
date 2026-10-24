@@ -1,7 +1,7 @@
 # Fork customizations — claude_code_router
 
 - Fork: https://github.com/RichelynScott/claude_code_router.git; upstream: https://github.com/musistudio/claude-code-router.git; branch checked: `main` @ `b68865d`; upstream ref: `upstream/main` @ `e270dea` (2026-03-04); merge-base: `e270dea`; fork-only commits: 1 non-merge on `main` (`7bb844a`, plus merge `b68865d` whose tree equals `7bb844a` — no merge content); drafted by ollama-cloud/deepseek-v4.1-flash on 2026-10-24 (drafted by DeepSeek V4.1 Flash from cached upstream refs; header and spot rows checked by suni_3_n 2026-10-24, not a full review)
-- Expert skill: none found (searched `~/.agents/skills`, `~/.claude/skills`, `/data/Proj/GLOBAL_CONFIGS/shared/skills` for `*router*`/`*ccr*` — no `claude-code-router-docs-config-expert`); `.fork-sync.yml`: absent
+- Expert skill: `/home/richie/.hermes/skills/fork-management/claude-code-router-docs-config-expert`; `.fork-sync.yml`: absent
 - Second, unmerged ref also inspected: `origin/claude/advance-hermes-project-3mrSE` @ `fdc50cf` (3 fork-only commits, based on the same merge-base `e270dea`, contains `7bb844a`). Rows marked **[merged in #2, 879a3d3]** exist only there.
 
 | ID | Customization | Owner (from commit author/session names or records; else UNKNOWN) | Files / extension point | Mechanism (plugin, config, overlay, patch to upstream file, new file) | Supported upstream range (merge-base sha and date) | How to reapply after an upstream update | How to remove | Regression check (exact command or manual check) | Evidence (commit SHAs) |
